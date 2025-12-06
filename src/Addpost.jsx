@@ -74,7 +74,7 @@ function Addpost() {
                 </div>
               </div>
 
-              {/* Email Field */}
+              <p>email field changed</p>
               <div>
                 <label
                   htmlFor="email"
