@@ -5,6 +5,10 @@ import CustomModal from "./CustomModal";
 import Actions from "./Actions";
 import { useNavigate } from "react-router-dom";
 
+console.log(
+  "first"
+)
+
 function Allpost() {
   const dispatch = useDispatch();
   const [pop, setPop] = useState(false);
