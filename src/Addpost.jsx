@@ -14,6 +14,7 @@ function Addpost() {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   console.log("pakistan zindabad")
+  console.log("pakistan zindabad")
   const status = useSelector((state) => state.app.status);
 
   const handleInputChange = (e) => {
