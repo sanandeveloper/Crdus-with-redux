@@ -2,8 +2,11 @@ import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { createUser } from "./store/userDeatils";
 import { useNavigate } from "react-router-dom";
+import { useEffectEvent } from "react";
 
 function Addpost() {
+
+  const [count, setCount] = useState(0);
   const [formData, setFormdata] = useState({
     name: "",
     email: "",
@@ -22,6 +25,20 @@ function Addpost() {
       [name]: value,
     }));
   };
+
+  const onIcrement=useEffectEvent(() => {
+     setCount((prevCount) => prevCount + 1);
+  },[count]);
+
+
+  useEffect(() => {
+
+   console.log("use effect event called lets try how its work")
+  }, [count]);
+  
+  
+
+
 
 
 
@@ -49,6 +66,7 @@ function Addpost() {
               Please fill in all required fields
             </p>
           </div>
+          <p onClick={onIcrement}>{count}</p>
 
           <form onSubmit={handleSubmit} className="space-y-6">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
